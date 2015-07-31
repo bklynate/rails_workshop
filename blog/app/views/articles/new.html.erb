@@ -4,7 +4,7 @@
 	<% if @article.errors.any? %>
 		<div id="error_explanation">
 			<h2>
-				<%= pluralize(@articles.errors.count, "error") %>
+				<%= pluralize(@article.errors.count, "error") %>
 				prohibited this article from beind saved:
 			</h2>		
 			<ul>
