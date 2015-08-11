@@ -1,7 +1,4 @@
-<p class='lead'>
-  All Posts
-  <hr/> 
-</p>
+<%= render 'shared/content_header', title: "Post Collection" %> 
 
 <% @posts.each do |post| %>
   <div class='row'>
@@ -10,7 +7,7 @@
         <span class='badge'><%= category.name %></span>
       <% end %>
 
-      <h4><%= link_to post.title, post.url %></h4>
+      <h4><%= link_to post.title, post_path(post) %></h4>
       <p><%= post.description %></p>
       <p>
         <span class='quiet'>posted by </span><%= post.creator.username %>
